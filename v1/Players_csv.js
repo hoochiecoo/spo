@@ -23,33 +23,31 @@ function parseCSV(csv) {
 function TennisStats() {
     const stats = parseCSV(tennisMatchStatsCSV);
 
-    return (
-        <div>
-            <h2>Tennis Match Statistics</h2>
-            <table>
-                <thead>
-                    <tr>
-                        {Object.keys(stats[0]).map((header, index) => (
-                            <th key={index}>{header}</th>
-                        ))}
-                    </tr>
-                </thead>
-                <tbody>
-                    {stats.map((playerStats, index) => (
-                        <tr key={index}>
-                            {Object.values(playerStats).map((value, index) => (
-                                <td key={index}>{value}</td>
-                            ))}
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
+    // Creating the elements using React.createElement
+    const tableHeaders = headers => headers.map((header, index) =>
+        React.createElement('th', { key: index }, header)
+    );
+
+    const tableRows = data => data.map((row, index) => {
+        const rowCells = Object.values(row).map((value, index) =>
+            React.createElement('td', { key: index }, value)
+        );
+        return React.createElement('tr', { key: index }, rowCells);
+    });
+
+    return React.createElement('div', null,
+        React.createElement('h2', null, 'Tennis Match Statistics'),
+        React.createElement('table', null,
+            React.createElement('thead', null,
+                React.createElement('tr', null, tableHeaders(Object.keys(stats[0])))
+            ),
+            React.createElement('tbody', null, tableRows(stats))
+        )
     );
 }
 
 // Render the TennisStats component into the 'content' container
 ReactDOM.render(
-    <TennisStats />,
+    React.createElement(TennisStats, null),
     document.getElementById('Players_csv')
 );
