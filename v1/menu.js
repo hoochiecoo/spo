@@ -1,6 +1,6 @@
 // Define JsonMenuLoader component
 function JsonMenuLoader() {
-    const jsonUrl = 'https://api.github.com/repos/hoochiecoo/test/contents/json-forms/2-react'; // GitHub API URL
+    const jsonUrl = 'https://api.github.com/repos/hoochiecoo/spo/contents/v1'; // GitHub API URL
 
     function handleLoad() {
         fetch(jsonUrl, {
