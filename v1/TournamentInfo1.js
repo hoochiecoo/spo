@@ -90,5 +90,5 @@ function App() {
 // Render the App component into the 'content' container
 ReactDOM.render(
     React.createElement(App),
-    document.getElementById('content')
+    document.getElementById('TournamentInfo1')
 );
