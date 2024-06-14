@@ -1,6 +1,6 @@
 // Define Content component
 function Content() {
-    return React.createElement('div', null, 'Hello, Players');
+    return React.createElement('div', null, 'Hello, Tournaments');
 }
 
 // Render the Content component into the 'content' container
