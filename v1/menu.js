@@ -43,5 +43,5 @@ function JsonMenuLoader() {
 // Render the JsonMenuLoader component into the 'JsonMenuLoader' container
 ReactDOM.render(
     React.createElement(JsonMenuLoader),
-    document.getElementById('JsonMenuLoader3')
+    document.getElementById('menu')
 );
