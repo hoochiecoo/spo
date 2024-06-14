@@ -1,4 +1,4 @@
-// Define Content component
+
 function Content() {
     const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
     const getRandomFloat = (min, max) => (Math.random() * (max - min) + min).toFixed(2);
@@ -30,7 +30,7 @@ function Content() {
     return (
         <div>
             <h2>Bowling Match Statistics</h2>
-            <table>
+            <table border="1">
                 <thead>
                     <tr>
                         <th>Statistic</th>
@@ -90,8 +90,7 @@ function Content() {
     );
 }
 
-// Render the Content component into the 'content' container
 ReactDOM.render(
-    React.createElement(Content),
-    document.getElementById('Players2')
+    <Content />,
+    document.getElementById('Player.js')
 );
