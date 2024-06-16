@@ -164,5 +164,5 @@ class Content extends React.Component {
 // Render the Content component into the 'content' container
 ReactDOM.render(
     React.createElement(Content),
-    document.getElementById('content')
+    document.getElementById('player_opponents_favorite_day')
 );
