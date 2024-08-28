@@ -10,8 +10,10 @@ function Content() {
     return React.createElement('div', { style: style }, 'Hello, Home');
 }
 
-// Render the Content component into the 'content' container
-ReactDOM.render(
-    React.createElement(Content),
-    document.getElementById('Home')
-);
+// Ensure that the script is executed after the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    ReactDOM.render(
+        React.createElement(Content),
+        document.getElementById('content')
+    );
+});
