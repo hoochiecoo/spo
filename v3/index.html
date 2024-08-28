@@ -26,22 +26,20 @@
                 document.getElementById('root').appendChild(div);
             });
         }
-        
+
         // Function to dynamically load components based on query parameter 'parts'
         function loadComponents() {
             const queryParams = getQueryParams();
-            const parts = queryParams['parts'] ? queryParams['parts'].split(',') : ['content'];
-        
+            const parts = queryParams['parts'] ? queryParams['parts'].split(',') : ['core', 'content'];
+
             createPartDivs(parts);
-        
+
             parts.forEach(part => {
                 const script = document.createElement('script');
-                script.type = 'module';
-                script.src = `content-folder/${part}.js`;
+                script.src = `${part}.js`;
                 document.head.appendChild(script);
             });
         }
-
 
         // Call loadComponents when the page loads
         window.onload = loadComponents;
