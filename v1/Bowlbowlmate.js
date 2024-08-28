@@ -1,3 +1,170 @@
+/ Define CSS styles using JavaScript objects
+const styles = {
+    body: {
+        fontFamily: 'Arial, sans-serif',
+        margin: 0,
+        padding: 0,
+        backgroundColor: '#121212',
+        color: '#e0e0e0'
+    },
+    navbar: {
+        backgroundColor: '#1f1f1f',
+        color: '#e0e0e0',
+        padding: '10px',
+        textAlign: 'center'
+    },
+    logo: {
+        fontSize: '20px',
+        fontWeight: 'bold'
+    },
+    hero: {
+        backgroundImage: 'url("https://www.bowlingdigital.de/wp-content/uploads/2017/11/bowling.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        color: '#e0e0e0',
+        textAlign: 'center',
+        padding: '60px 15px'
+    },
+    heroH1: {
+        fontSize: '24px',
+        margin: 0
+    },
+    heroP: {
+        fontSize: '16px',
+        margin: '15px 0'
+    },
+    searchBox: {
+        marginTop: '20px'
+    },
+    select: {
+        padding: '10px',
+        fontSize: '16px',
+        width: '100%',
+        maxWidth: '300px',
+        margin: '5px 0',
+        border: 'none',
+        borderRadius: '5px',
+        backgroundColor: '#333',
+        color: '#e0e0e0'
+    },
+    selectOptionDisabled: {
+        color: '#888'
+    },
+    button: {
+        padding: '10px',
+        fontSize: '16px',
+        width: '100%',
+        maxWidth: '300px',
+        margin: '5px 0',
+        border: 'none',
+        borderRadius: '5px',
+        backgroundColor: '#ff6f61',
+        color: 'white',
+        cursor: 'pointer'
+    },
+    infoSection: {
+        padding: '20px 15px',
+        textAlign: 'center',
+        backgroundColor: '#1f1f1f'
+    },
+    infoSectionH2: {
+        fontSize: '20px',
+        marginBottom: '15px'
+    },
+    infoSectionP: {
+        fontSize: '14px',
+        marginBottom: '15px'
+    },
+    bookingSection: {
+        padding: '20px 15px',
+        backgroundColor: '#333',
+        textAlign: 'center'
+    },
+    bookingSectionH2: {
+        fontSize: '20px',
+        marginBottom: '15px'
+    },
+    slots: {
+        listStyle: 'none',
+        padding: 0,
+        margin: 0
+    },
+    slot: {
+        backgroundColor: '#1f1f1f',
+        padding: '15px',
+        borderRadius: '5px',
+        margin: '5px 0',
+        cursor: 'pointer',
+        transition: 'background-color 0.3s ease',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+    },
+    slotHover: {
+        backgroundColor: '#ff6f61',
+        color: 'white'
+    },
+    slotDisabled: {
+        backgroundColor: '#555',
+        cursor: 'not-allowed'
+    },
+    footer: {
+        backgroundColor: '#1f1f1f',
+        color: '#e0e0e0',
+        padding: '15px',
+        textAlign: 'center'
+    },
+    footerP: {
+        margin: 0,
+        fontSize: '12px'
+    },
+    popup: {
+        display: 'none',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        background: 'rgba(0, 0, 0, 0.8)',
+        color: '#e0e0e0',
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: 1000
+    },
+    popupContent: {
+        background: '#1f1f1f',
+        padding: '20px',
+        borderRadius: '5px',
+        width: '90%',
+        maxWidth: '400px'
+    },
+    popupContentH2: {
+        marginTop: 0
+    },
+    popupInput: {
+        width: '100%',
+        padding: '10px',
+        margin: '5px 0',
+        borderRadius: '5px',
+        border: '1px solid #333',
+        background: '#333',
+        color: '#e0e0e0'
+    },
+    popupButton: {
+        backgroundColor: '#ff6f61',
+        color: 'white',
+        padding: '10px',
+        border: 'none',
+        borderRadius: '5px',
+        cursor: 'pointer',
+        width: '100%'
+    },
+    popupButtonCancel: {
+        backgroundColor: '#666',
+        marginTop: '10px'
+    }
+};
+
 // Define Navbar component
 function Navbar() {
     return React.createElement('div', { className: 'navbar' },
