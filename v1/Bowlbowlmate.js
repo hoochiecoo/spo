@@ -1,4 +1,4 @@
-/ Define CSS styles using JavaScript objects
+// Define CSS styles using JavaScript objects
 const styles = {
     body: {
         fontFamily: 'Arial, sans-serif',
